@@ -1,0 +1,33 @@
+@font-face {
+  font-family: "InstrumentSerif";
+  src: url("./assets/fonts/InstrumentSerif-Italic.ttf") format("truetype");
+  font-style: italic;
+}
+@font-face {
+  font-family: "BricolageGrotesque";
+  src: url("./assets/fonts/BricolageGrotesque_24pt-Medium.ttf")
+    format("truetype");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("./assets/fonts/Inter-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+.font-uxum {
+  font-family: "uxumGrotesqueMedium";
+}
+
+.font-BricolageGrotesque {
+  font-family: "BricolageGrotesque", sans-serif;
+}
+
+.font-instrument {
+  font-family: "InstrumentSerif", serif;
+}
+
+.font-inter {
+  font-family: "Inter", sans-serif;
+}

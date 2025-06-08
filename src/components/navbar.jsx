@@ -11,7 +11,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-white font-inter">
+    <nav className="bg-[#f7f3ef] font-inter">
       <div className="max-w-7xl mx-auto px-8 lg:px-6 py-4">
         <div className="flex justify-between items-center">
           {/* Left Section: Logo and Menu Items */}
