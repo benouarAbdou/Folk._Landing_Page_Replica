@@ -5,7 +5,7 @@ import "../styles/heroStyle.css"; // Assuming you have a CSS file for additional
 
 function Hero() {
   return (
-    <section className="relative text-center bg-[#f7f3ef] pb-[40%]">
+    <section className="relative text-center bg-[#f7f3ef] pb-[40%] px-4">
       {" "}
       {/* Added relative positioning and padding-bottom to create space for absolute image */}
       <div className="mx-auto">
