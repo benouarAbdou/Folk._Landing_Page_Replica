@@ -9,7 +9,7 @@ function Button({ to, variant, children }) {
       : "text-white bg-black hover:border-black border border-transparent";
 
   return (
-    <Link to={to} className={`${baseClasses} ${variantClasses}`}>
+    <Link to={to} className={`${baseClasses} ${variantClasses} relative z-20`}>
       {children}
     </Link>
   );
