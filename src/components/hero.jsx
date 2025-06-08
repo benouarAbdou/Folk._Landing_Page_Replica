@@ -9,7 +9,7 @@ function Hero() {
       {" "}
       {/* Added relative positioning and padding-bottom to create space for absolute image */}
       <div className="mx-auto">
-        <h1 className="pt-20 font-BricolageGrotesque font-semibold text-4xl md:text-7xl mb-6 md:leading-20">
+        <h1 className="pt-32 font-BricolageGrotesque font-semibold text-4xl md:text-7xl mb-6 md:leading-20">
           Like the{" "}
           <span className="font-instrument italic font-normal">
             sales assistant
@@ -37,6 +37,7 @@ function Hero() {
         alt="Hero"
         className="absolute bottom-0 left-0 w-full h-auto " /* Added absolute positioning and translate to raise the image */
       />
+      <div className="absolute bottom-0 left-0 w-full h-[2px] bg-black z-10" />
     </section>
   );
 }
