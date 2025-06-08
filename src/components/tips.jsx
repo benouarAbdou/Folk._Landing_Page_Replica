@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import "../styles/heroStyle.css"; // Assuming you have a CSS file for additional styles
 
 const Tips = () => {
@@ -18,17 +19,15 @@ const Tips = () => {
 
   const handleMouseMove = (e, index) => {
     const rect = e.currentTarget.getBoundingClientRect();
-    const tooltipWidth = 400; // Fixed width of the tooltip
+    const tooltipWidth = 400;
     const viewportWidth = window.innerWidth;
     let x = e.clientX - rect.left;
     const y = e.clientY - rect.top;
 
-    // Clip x to prevent tooltip from extending beyond viewport
     if (e.clientX + tooltipWidth > viewportWidth) {
-      x = viewportWidth - rect.left - tooltipWidth; // Adjust to keep tooltip within viewport
+      x = viewportWidth - rect.left - tooltipWidth;
     }
 
-    // Ensure x doesn't go negative (optional, for left edge clipping)
     if (x < 0) {
       x = 0;
     }
@@ -38,6 +37,24 @@ const Tips = () => {
 
   const handleMouseLeave = () => {
     setTooltip({ visible: false, x: 0, y: 0, index: null });
+  };
+
+  // Tooltip text split into words
+  const tooltipText =
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.";
+  const words = tooltipText.split(" ");
+
+  // Animation variants for words
+  const wordVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: (i) => ({
+      opacity: 1,
+      y: 0,
+      transition: {
+        delay: i * 0.05, // Fast stagger effect
+        duration: 0.2 // Fast animation
+      }
+    })
   };
 
   return (
@@ -63,23 +80,39 @@ const Tips = () => {
               <h1 className="mt-4 text-center text-xl font-medium">
                 {card.text}
               </h1>
-              {tooltip.visible && tooltip.index === index && (
-                <div
-                  className="absolute bg-black text-white text-lg p-4 z-10"
-                  style={{
-                    left: `${tooltip.x}px`,
-                    top: `${tooltip.y}px`,
-                    borderRadius: "0 8px 8px 8px",
-                    transform: "translate(5%, 5%)",
-                    width: "300px",
-                    minHeight: "fit-content",
-                    overflow: "auto"
-                  }}
-                >
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                </div>
-              )}
+              <AnimatePresence>
+                {tooltip.visible && tooltip.index === index && (
+                  <motion.div
+                    className="absolute bg-black text-white text-lg p-4 z-10"
+                    style={{
+                      left: `${tooltip.x + 20}px`,
+                      top: `${tooltip.y + 20}px`, // Added 20px offset below cursor
+                      borderRadius: "0 8px 8px 8px",
+                      transform: "translate(10%, 10%)", // Increased translate for more space
+                      width: "300px",
+                      minHeight: "fit-content",
+                      overflow: "hidden"
+                    }}
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    exit={{ opacity: 0, scale: 0.8 }}
+                    transition={{ duration: 0.1 }}
+                  >
+                    {words.map((word, i) => (
+                      <motion.span
+                        key={i}
+                        variants={wordVariants}
+                        initial="hidden"
+                        animate="visible"
+                        custom={i}
+                        style={{ display: "inline-block", marginRight: "5px" }}
+                      >
+                        {word}
+                      </motion.span>
+                    ))}
+                  </motion.div>
+                )}
+              </AnimatePresence>
             </div>
           ))}
         </div>
