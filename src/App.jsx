@@ -7,6 +7,7 @@ import Tips from "./components/tips.jsx";
 import Advantages from "./components/advantages.jsx";
 import Qr from "./components/qr.jsx";
 import Safety from "./components/safety.jsx";
+import ColorfulLine from "./components/colorfulLine.jsx";
 function App() {
   return (
     <BrowserRouter>
@@ -18,6 +19,7 @@ function App() {
         <Advantages />
         <Qr />
         <Safety />
+        <ColorfulLine />
       </div>
     </BrowserRouter>
   );
