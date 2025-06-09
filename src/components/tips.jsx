@@ -87,9 +87,9 @@ const Tips = () => {
                     style={{
                       left: `${tooltip.x + 20}px`,
                       top: `${tooltip.y + 20}px`, // Added 20px offset below cursor
-                      borderRadius: "0 8px 8px 8px",
+                      borderRadius: "0 24px 24px 24px",
                       transform: "translate(10%, 10%)", // Increased translate for more space
-                      width: "300px",
+                      width: "350px",
                       minHeight: "fit-content",
                       overflow: "hidden"
                     }}

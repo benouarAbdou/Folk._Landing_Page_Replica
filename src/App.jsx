@@ -4,6 +4,7 @@ import Navbar from "./components/navbar.jsx";
 import Hero from "./components/hero.jsx";
 import Ratings from "./components/ratings.jsx";
 import Tips from "./components/tips.jsx";
+import Advantages from "./components/advantages.jsx";
 function App() {
   return (
     <BrowserRouter>
@@ -12,7 +13,7 @@ function App() {
         <Hero />
         <Ratings />
         <Tips />
-        <Ratings />
+        <Advantages />
       </div>
     </BrowserRouter>
   );
