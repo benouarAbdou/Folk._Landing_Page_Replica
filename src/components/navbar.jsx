@@ -32,6 +32,27 @@ const Navbar = () => {
     };
   }, []);
 
+  // Handle window resize to close mobile menu on large screens
+  useEffect(() => {
+    const handleResize = () => {
+      // Close mobile menu when window width is >= 1024px (lg breakpoint)
+      if (window.innerWidth >= 1024) {
+        setIsOpen(false);
+      }
+    };
+
+    // Add resize event listener
+    window.addEventListener("resize", handleResize);
+
+    // Call handler immediately to handle initial window size
+    handleResize();
+
+    // Cleanup event listener on component unmount
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
     <nav
       className={`fixed top-0 w-full z-50 font-inter transition-all ${
@@ -50,7 +71,7 @@ const Navbar = () => {
             <div className="hidden lg:ml-6 lg:flex lg:space-x-4">
               <Link
                 to="/products"
-                className="inline-flex items-center px-3 py-2 text-lg font-medium  hover:bg-black/10   hover:rounded-full"
+                className="inline-flex items-center px-3 py-2 text-lg font-medium hover:bg-black/10 hover:rounded-full"
               >
                 Products
               </Link>
@@ -98,19 +119,19 @@ const Navbar = () => {
           </div>
 
           {/* Mobile Right Section */}
-          <div className="lg:hidden flex items-center  space-x-2">
-            {!isOpen && (
-              <Link
-                to="/try-free"
-                className="inline-flex items-center justify-center px-4 py-2 text-lg font-medium rounded-full text-white bg-black hover:bg-transparent hover:text-black hover:border-black border border-transparent"
-              >
-                Try for Free
-              </Link>
-            )}
+          <div className="lg:hidden flex items-center space-x-2">
+            <Link
+              to="/try-free"
+              className={`inline-flex items-center justify-center px-4 py-2 text-lg font-medium rounded-full text-white bg-black hover:bg-transparent hover:text-black hover:border-black border border-transparent ${
+                isOpen ? "invisible" : "visible"
+              }`}
+            >
+              Try for Free
+            </Link>
             <button
               onClick={toggleMenu}
               type="button"
-              className="inline-flex items-center justify-center p-2 rounded-md text-black cursor-pointer  focus:outline-none"
+              className="inline-flex items-center justify-center p-2 rounded-md text-black cursor-pointer focus:outline-none"
               aria-controls="mobile-menu"
               aria-expanded={isOpen}
             >
@@ -155,7 +176,7 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="lg:hidden bg-white h-lvh" id="mobile-menu ">
+        <div className="lg:hidden bg-white h-lvh" id="mobile-menu">
           <div className="pt-2 pb-3 px-8 space-y-1">
             <Link
               to="/products"
@@ -185,13 +206,13 @@ const Navbar = () => {
             <div className="border-t border-gray-200 mx-3 py-2" />
             <Link
               to="/demo"
-              className="block px-6 py-4 text-2xl font-medium  hover:bg-black hover:text-white border border-black rounded-full mx-3 my-4 justify-center"
+              className="block px-6 py-4 text-2xl font-medium hover:bg-black hover:text-white border border-black rounded-full mx-3 my-4 justify-center"
             >
               Get Demo
             </Link>
             <Link
               to="/login"
-              className="block px-6 py-4 text-2xl font-medium  hover:bg-black hover:text-white border border-black rounded-full mx-3 my-4 justify-center"
+              className="block px-6 py-4 text-2xl font-medium hover:bg-black hover:text-white border border-black rounded-full mx-3 my-4 justify-center"
             >
               Login
             </Link>
