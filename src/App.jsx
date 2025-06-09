@@ -5,6 +5,7 @@ import Hero from "./components/hero.jsx";
 import Ratings from "./components/ratings.jsx";
 import Tips from "./components/tips.jsx";
 import Advantages from "./components/advantages.jsx";
+import Qr from "./components/qr.jsx";
 function App() {
   return (
     <BrowserRouter>
@@ -14,6 +15,7 @@ function App() {
         <Ratings />
         <Tips />
         <Advantages />
+        <Qr />
       </div>
     </BrowserRouter>
   );

@@ -48,7 +48,7 @@ function Advantages() {
   ];
 
   return (
-    <div className="flex flex-col items-center gap-10 px-4 py-10 bg-gray-50">
+    <div className="flex flex-col items-center gap-10 px-4 py-10">
       {cardsData.map((card, index) => (
         <AdvantageCard
           key={index}
