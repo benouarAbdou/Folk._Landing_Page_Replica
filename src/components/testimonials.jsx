@@ -77,7 +77,9 @@ const Testimonials = () => {
           <div
             key={index}
             className={
-              t.sideImageUrl ? "col-sapn-1 md:col-span-2" : "col-span-1"
+              t.sideImageUrl
+                ? "col-sapn-1 md:col-span-2 hidden sm:block"
+                : "col-span-1 "
             }
           >
             <TestimonialCard {...t} />

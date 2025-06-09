@@ -12,7 +12,7 @@ const TestimonialCard = ({
   sideImageUrl = null // optional
 }) => {
   return (
-    <div className="relative  h-full group">
+    <div className="relative h-full group">
       {/* Shadow effect */}
       <div
         className={`
@@ -29,22 +29,22 @@ const TestimonialCard = ({
         className={`
           relative p-6 border flex ${
             sideImageUrl ? "flex-row" : "flex-col"
-          } justify-between items-start
+          } items-start
           hover:-translate-x-[1%] hover:-translate-y-[1%]
           transition-transform duration-300
           z-10 h-full bg-white
         `}
-        style={{ minHeight: sideImageUrl ? "250px" : "auto" }} // define height for flex-row
+        style={{ minHeight: sideImageUrl ? "250px" : "auto" }}
       >
         {/* Content Section */}
-        <div className="flex flex-col justify-between  max-w-full pr-4 flex-1">
-          <p className="text-xl font-uxum mb-4">
+        <div className="flex flex-col justify-between min-h-full max-w-full pr-4 flex-1">
+          <p className="text-xl font-uxum font-medium mb-4">
             "{quoteBeforeHighlight}
             <span className={`${highlightColor} px-1`}>{highlightedText}</span>
             {quoteAfterHighlight}"
           </p>
 
-          <div className="flex items-center mt-4">
+          <div className="flex items-center mt-auto">
             <img
               src={imageUrl}
               alt={name}
