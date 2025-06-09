@@ -1,11 +1,11 @@
 import React from "react";
 import TestimonialCard from "./testoCard";
-
 import pic1 from "../assets/images/pic1.png";
 import pic2 from "../assets/images/pic2.png";
 import pic3 from "../assets/images/pic3.png";
 import pic4 from "../assets/images/pic4.png";
 import pic5 from "../assets/images/pic5.png";
+import im10 from "../assets/images/im10.png";
 
 const testimonials = [
   {
@@ -61,18 +61,8 @@ const testimonials = [
     job: "founder ",
     twitterHandle: "monette",
     imageUrl: pic5,
-    highlightColor: "bg-yellow-100"
-  },
-  {
-    quoteBeforeHighlight:
-      "Prospecting takes multiple forms: reach out to someone, meet at an event, get introduced, word of mouth... ",
-    highlightedText: "folk helps us capture all of this",
-    quoteAfterHighlight: ".",
-    name: "Hugo",
-    job: "CEO",
-    twitterHandle: " @nextra",
-    imageUrl: pic2,
-    highlightColor: "bg-green-100"
+    highlightColor: "bg-yellow-100",
+    sideImageUrl: im10
   }
 ];
 
@@ -82,9 +72,14 @@ const Testimonials = () => {
       <h2 className="text-5xl font-bold mb-8 text-left font-uxum normal">
         What People Are Saying
       </h2>
-      <div className="grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+      <div className="grid gap-8 sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
         {testimonials.map((t, index) => (
-          <div key={index}>
+          <div
+            key={index}
+            className={
+              t.sideImageUrl ? "col-sapn-1 md:col-span-2" : "col-span-1"
+            }
+          >
             <TestimonialCard {...t} />
           </div>
         ))}

@@ -60,7 +60,7 @@ const Tips = () => {
   return (
     <div className="py-8 bg-white">
       <div className="max-w-[1500px] mx-auto px-8 lg:px-6">
-        <h2 className="text-3xl font-bold text-left mb-8 font-uxum normal">
+        <h2 className="text-5xl font-bold text-left mb-8 font-uxum normal">
           Finally, a CRM that works{" "}
           <span className="font-instrument italic font-normal">for</span> you
         </h2>
