@@ -1,11 +1,19 @@
 import { Link } from "react-router-dom";
 import Button from "./Button.jsx";
 import heroImage from "../assets/images/hero1.webp";
+import grain from "../assets/images/grain.png"; // Import the grain image
 import "../styles/heroStyle.css"; // Assuming you have a CSS file for additional styles
 
 function Hero() {
   return (
-    <section className="relative text-center bg-[#f7f3ef] pb-[40%] px-4">
+    <section
+      className="relative text-center bg-[#f7f3ef] pb-[40%] px-4"
+      style={{
+        backgroundImage: `url(${grain})`,
+        backgroundRepeat: "repeat",
+        backgroundSize: "auto"
+      }}
+    >
       {" "}
       {/* Added relative positioning and padding-bottom to create space for absolute image */}
       <div className="mx-auto">
@@ -35,7 +43,7 @@ function Hero() {
       <img
         src={heroImage}
         alt="Hero"
-        className="absolute bottom-0 left-0 w-full h-auto " /* Added absolute positioning and translate to raise the image */
+        className="absolute bottom-0 left-0 w-full h-auto "
       />
       <div className="absolute bottom-0 left-0 w-full h-[2px] bg-black z-10" />
     </section>

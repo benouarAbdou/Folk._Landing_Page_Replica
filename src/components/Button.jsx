@@ -9,7 +9,7 @@ function Button({ to, variant, children }) {
       outline:
         "text-gray-900 hover:bg-black hover:text-white border border-black",
       filled:
-        "text-white bg-black hover:border-black border border-transparent",
+        "text-white bg-black hover:border-black hover:bg-transparent hover:text-black border border-transparent",
       white:
         "text-black bg-white hover:bg-transparent hover:text-white hover:border-white border border-transparent",
       black:

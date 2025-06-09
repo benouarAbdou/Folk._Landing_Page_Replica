@@ -1,17 +1,43 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Logo from "../assets/images/logo.svg";
 import "../styles/navbarStyle.css"; // Assuming you have a CSS file for additional styles
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
+  // Toggle mobile menu
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
 
+  // Handle scroll event
+  useEffect(() => {
+    const handleScroll = () => {
+      // Change background when scrollY is greater than a small threshold (e.g., 10px)
+      if (window.scrollY > 10) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    // Add scroll event listener
+    window.addEventListener("scroll", handleScroll);
+
+    // Cleanup event listener on component unmount
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <nav className="fixed top-0 w-full z-50 bg-[#f7f3ef] font-inter">
+    <nav
+      className={`fixed top-0 w-full z-50 font-inter transition-all ${
+        isScrolled || isOpen ? "bg-white" : "bg-transparent"
+      }`}
+    >
       <div className="max-w-[1500px] mx-auto px-8 lg:px-6 py-4">
         <div className="flex justify-between items-center">
           {/* Left Section: Logo and Menu Items */}
@@ -24,25 +50,25 @@ const Navbar = () => {
             <div className="hidden lg:ml-6 lg:flex lg:space-x-4">
               <Link
                 to="/products"
-                className="inline-flex items-center px-3 py-2 text-lg font-medium text-gray-900 hover:bg-gray-100 hover:rounded-full"
+                className="inline-flex items-center px-3 py-2 text-lg font-medium  hover:bg-black/10   hover:rounded-full"
               >
                 Products
               </Link>
               <Link
                 to="/solutions"
-                className="inline-flex items-center px-3 py-2 text-lg font-medium text-gray-900 hover:bg-gray-100 hover:rounded-full"
+                className="inline-flex items-center px-3 py-2 text-lg font-medium hover:bg-black/10 hover:rounded-full"
               >
                 Solutions
               </Link>
               <Link
                 to="/resources"
-                className="inline-flex items-center px-3 py-2 text-lg font-medium text-gray-900 hover:bg-gray-100 hover:rounded-full"
+                className="inline-flex items-center px-3 py-2 text-lg font-medium hover:bg-black/10 hover:rounded-full"
               >
                 Resources
               </Link>
               <Link
                 to="/prices"
-                className="inline-flex items-center px-3 py-2 text-lg font-medium text-gray-900 hover:bg-gray-100 hover:rounded-full"
+                className="inline-flex items-center px-3 py-2 text-lg font-medium hover:bg-black/10 hover:rounded-full"
               >
                 Prices
               </Link>
@@ -53,13 +79,13 @@ const Navbar = () => {
           <div className="hidden lg:ml-6 lg:flex lg:items-center lg:space-x-4">
             <Link
               to="/demo"
-              className="inline-flex items-center px-3 py-2 text-lg font-medium text-gray-900 hover:bg-gray-100 hover:rounded-full"
+              className="inline-flex items-center px-3 py-2 text-lg font-medium hover:bg-black/10 hover:rounded-full"
             >
               Get Demo
             </Link>
             <Link
               to="/login"
-              className="inline-flex items-center px-3 py-2 text-lg font-medium text-gray-900 hover:bg-gray-100 hover:rounded-full"
+              className="inline-flex items-center px-3 py-2 text-lg font-medium hover:bg-black/10 hover:rounded-full"
             >
               Login
             </Link>
@@ -72,7 +98,7 @@ const Navbar = () => {
           </div>
 
           {/* Mobile Right Section */}
-          <div className="lg:hidden flex items-center space-x-2">
+          <div className="lg:hidden flex items-center  space-x-2">
             {!isOpen && (
               <Link
                 to="/try-free"
@@ -84,7 +110,7 @@ const Navbar = () => {
             <button
               onClick={toggleMenu}
               type="button"
-              className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none"
+              className="inline-flex items-center justify-center p-2 rounded-md text-black cursor-pointer  focus:outline-none"
               aria-controls="mobile-menu"
               aria-expanded={isOpen}
             >
@@ -129,29 +155,29 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="lg:hidden" id="mobile-menu">
+        <div className="lg:hidden bg-white h-lvh" id="mobile-menu ">
           <div className="pt-2 pb-3 px-8 space-y-1">
             <Link
               to="/products"
-              className="block px-4 py-2 text-xl font-medium text-gray-900 hover:bg-gray-100 hover:rounded-full"
+              className="block px-4 py-2 text-2xl font-medium hover:bg-black/10 hover:rounded-full"
             >
               Products
             </Link>
             <Link
               to="/solutions"
-              className="block px-4 py-2 text-xl font-medium text-gray-900 hover:bg-gray-100 hover:rounded-full"
+              className="block px-4 py-2 text-2xl font-medium hover:bg-black/10 hover:rounded-full"
             >
               Solutions
             </Link>
             <Link
               to="/resources"
-              className="block px-4 py-2 text-xl font-medium text-gray-900 hover:bg-gray-100 hover:rounded-full"
+              className="block px-4 py-2 text-2xl font-medium hover:bg-black/10 hover:rounded-full"
             >
               Resources
             </Link>
             <Link
               to="/prices"
-              className="block px-4 py-2 text-xl font-medium text-gray-900 hover:bg-gray-100 hover:rounded-full"
+              className="block px-4 py-2 text-2xl font-medium hover:bg-black/10 hover:rounded-full"
             >
               Prices
             </Link>
@@ -159,19 +185,19 @@ const Navbar = () => {
             <div className="border-t border-gray-200 mx-3 py-2" />
             <Link
               to="/demo"
-              className="block px-4 py-3 text-xl font-medium text-gray-900 hover:bg-black hover:text-white border border-black rounded-full mx-3 justify-center"
+              className="block px-6 py-4 text-2xl font-medium  hover:bg-black hover:text-white border border-black rounded-full mx-3 my-4 justify-center"
             >
               Get Demo
             </Link>
             <Link
               to="/login"
-              className="block px-4 py-3 text-xl font-medium text-gray-900 hover:bg-black hover:text-white border border-black rounded-full mx-3 justify-center"
+              className="block px-6 py-4 text-2xl font-medium  hover:bg-black hover:text-white border border-black rounded-full mx-3 my-4 justify-center"
             >
               Login
             </Link>
             <Link
               to="/try-free"
-              className="block px-4 py-3 text-xl font-medium text-white bg-black hover:border-black border border-transparent rounded-full mx-3 justify-center"
+              className="block px-6 py-4 text-2xl font-medium text-white bg-black hover:border-black border border-transparent rounded-full mx-3 my-4 justify-center"
             >
               Try for Free
             </Link>

@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import Button from "./Button.jsx"; // Assuming Button is a custom component for buttons
+import grain from "../assets/images/grain.png"; // Import the grain image
 
 const Footer = () => {
   // Define link data
@@ -83,7 +84,14 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-black text-white py-12">
+    <footer
+      className="bg-[#0E0E0E] text-white py-12"
+      style={{
+        backgroundImage: `url(${grain})`,
+        backgroundRepeat: "repeat",
+        backgroundSize: "auto"
+      }}
+    >
       <div className="max-w-[1500px] mx-auto px-4 sm:px-6 lg:px-8">
         {/* Top Row: Trial text and buttons */}
         <div className="flex flex-col xl:flex-row justify-between items-start xl:items-center mb-12 gap-6">
@@ -121,7 +129,7 @@ const Footer = () => {
         </div>
 
         {/* Gray Divider */}
-        <div className="border-t border-gray-900 my-8"></div>
+        <div className="border-t  border-white opacity-10 my-8"></div>
 
         {/* Bottom Row: Links and Social Icons */}
         <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 text-sm">
