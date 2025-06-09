@@ -6,6 +6,7 @@ import Ratings from "./components/ratings.jsx";
 import Tips from "./components/tips.jsx";
 import Advantages from "./components/advantages.jsx";
 import Qr from "./components/qr.jsx";
+import Safety from "./components/safety.jsx";
 function App() {
   return (
     <BrowserRouter>
@@ -16,6 +17,7 @@ function App() {
         <Tips />
         <Advantages />
         <Qr />
+        <Safety />
       </div>
     </BrowserRouter>
   );
