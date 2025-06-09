@@ -9,7 +9,7 @@ const Safety = () => {
       <div className="flex flex-col xl:flex-row items-center border-black border-[1px]">
         {/* Text Section */}
         <div className="flex-1 w-full py-4 px-6 -mx-8 lg:-mx-6 text-center lg:text-left xl:mx-0 xl:border-none border-b-[1px] border-black">
-          <h2 className="text-4xl lg:text-6xl font-semibold">
+          <h2 className="text-4xl lg:text-6xl font-semibold font-uxum normal">
             Your data is safe with us
           </h2>
         </div>

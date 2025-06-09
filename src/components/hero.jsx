@@ -9,7 +9,7 @@ function Hero() {
       {" "}
       {/* Added relative positioning and padding-bottom to create space for absolute image */}
       <div className="mx-auto">
-        <h1 className="pt-32 font-BricolageGrotesque font-semibold text-4xl md:text-7xl mb-6 md:leading-20">
+        <h1 className="pt-32 font-uxum normal font-semibold text-4xl md:text-7xl mb-6 md:leading-20">
           Like the{" "}
           <span className="font-instrument italic font-normal">
             sales assistant

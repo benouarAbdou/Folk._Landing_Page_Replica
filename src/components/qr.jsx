@@ -24,7 +24,7 @@ const Qr = () => {
               New
             </span>
           </div>
-          <p className="text-4xl lg:text-6xl font-semibold">
+          <p className="text-4xl lg:text-6xl font-bold font-uxum normal">
             Keep it casual with clients on <br /> WhatsApp, without leaving{" "}
             <br />
             your team out of the loop

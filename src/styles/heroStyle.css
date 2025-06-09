@@ -4,9 +4,8 @@
   font-style: italic;
 }
 @font-face {
-  font-family: "BricolageGrotesque";
-  src: url("./assets/fonts/BricolageGrotesque_24pt-Medium.ttf")
-    format("truetype");
+  font-family: "UxumGrotesque";
+  src: url("./assets/fonts/UxumGrotesque.ttf") format("truetype");
   font-style: normal;
 }
 
@@ -17,7 +16,7 @@
   font-style: normal;
 }
 .font-uxum {
-  font-family: "uxumGrotesqueMedium";
+  font-family: "UxumGrotesque", sans-serif;
 }
 
 .font-BricolageGrotesque {

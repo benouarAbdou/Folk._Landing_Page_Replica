@@ -60,7 +60,7 @@ const Tips = () => {
   return (
     <div className="py-8 bg-white">
       <div className="max-w-[1500px] mx-auto px-8 lg:px-6">
-        <h2 className="text-3xl font-bold text-left mb-8">
+        <h2 className="text-3xl font-bold text-left mb-8 font-uxum normal">
           Finally, a CRM that works{" "}
           <span className="font-instrument italic font-normal">for</span> you
         </h2>
@@ -75,9 +75,9 @@ const Tips = () => {
               <img
                 src={`/src/assets/images/${card.image}.png`}
                 alt={card.text}
-                className="w-full h-full object-cover border-2 border-black bg-[#f7f3ef]"
+                className="w-full h-full object-cover border-2 border-black bg-[#f7f3ef] "
               />
-              <h1 className="mt-4 text-center text-xl font-medium">
+              <h1 className="mt-4 text-center text-xl font-bold font-uxum normal">
                 {card.text}
               </h1>
               <AnimatePresence>

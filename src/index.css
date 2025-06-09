@@ -1,1 +1,10 @@
 @import "tailwindcss";
+
+@font-face {
+  font-family: "UxumGrotesque";
+  src: url("./assets/fonts/UxumGrotesque.ttf") format("truetype");
+  font-style: normal;
+}
+.font-uxum {
+  font-family: "UxumGrotesque", sans-serif;
+}

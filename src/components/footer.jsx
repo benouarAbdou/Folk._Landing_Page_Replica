@@ -87,7 +87,7 @@ const Footer = () => {
       <div className="max-w-[1500px] mx-auto px-4 sm:px-6 lg:px-8">
         {/* Top Row: Trial text and buttons */}
         <div className="flex flex-col xl:flex-row justify-between items-start xl:items-center mb-12 gap-6">
-          <h2 className="text-6xl font-bold text-left">
+          <h2 className="text-6xl font-bold text-left font-uxum normal">
             Start 14-day <br /> free trial on Folk
           </h2>
           <div className="flex xl:flex-col flex-row gap-4">
