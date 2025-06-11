@@ -68,11 +68,11 @@ const testimonials = [
 
 const Testimonials = () => {
   return (
-    <div className="px-6 py-10 max-w-[1500px] mx-auto">
-      <h2 className="text-5xl font-bold mb-8 text-left font-uxum normal">
+    <div className="px-6 py-10 max-w-6xl mx-auto">
+      <h2 className="text-4xl font-bold mb-8 text-left font-uxum normal">
         What People Are Saying
       </h2>
-      <div className="grid gap-8 sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
+      <div className="grid gap-4 sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
         {testimonials.map((t, index) => (
           <div
             key={index}

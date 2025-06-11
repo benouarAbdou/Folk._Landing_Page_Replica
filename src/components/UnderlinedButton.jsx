@@ -10,7 +10,7 @@ const lineVariants = {
 function UnderlinedButton({ text }) {
   return (
     <motion.button
-      className="text-xl font-semibold flex items-center hover:cursor-pointer"
+      className="text-sm font-semibold flex items-center hover:cursor-pointer"
       initial="initial"
       whileHover="hover"
     >

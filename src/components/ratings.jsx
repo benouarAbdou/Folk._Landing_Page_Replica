@@ -20,16 +20,16 @@ const Ratings = () => {
   ];
 
   return (
-    <div className="py-12 px-6">
-      <h2 className="text-3xl font-bold text-center mb-8 font-uxum normal">
+    <div className="py-8 px-6">
+      <h2 className="text-2xl font-bold text-center mb-4 font-uxum normal">
         Trusted by 3,000+ companies around the world
       </h2>
 
-      <div className="flex flex-row flex-wrap items-center justify-center gap-8">
+      <div className="flex flex-row flex-wrap items-center justify-center gap-4">
         {ratingsData.map((rating, index) => (
           <div key={index} className="p-2 flex flex-row items-start">
             <div
-              className="text-6xl font-serif italic px-4"
+              className="text-4xl font-serif italic px-4"
               style={{ fontFamily: "Instrument Serif, serif" }}
             >
               {rating.rating}
@@ -38,15 +38,15 @@ const Ratings = () => {
               <img
                 src="src/assets/images/5stars.png"
                 alt="5 stars"
-                className="w-24 h-auto"
+                className="w-18 h-auto"
               />
               <div className="flex items-center">
                 <img
                   src={rating.logo}
                   alt={`${rating.companyName} logo`}
-                  className="w-6 h-6 mr-4 object-contain"
+                  className="w-4 h-4 mr-2 object-contain"
                 />
-                <span className="text-lg font-medium text-gray-900">
+                <span className="text-md font-medium text-gray-900">
                   {rating.companyName}
                 </span>
               </div>

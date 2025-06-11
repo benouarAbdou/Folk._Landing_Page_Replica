@@ -92,10 +92,10 @@ const Footer = () => {
         backgroundSize: "auto"
       }}
     >
-      <div className="max-w-[1500px] mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Top Row: Trial text and buttons */}
         <div className="flex flex-col xl:flex-row justify-between items-start xl:items-center mb-12 gap-6">
-          <h2 className="text-5xl font-bold text-left font-uxum normal">
+          <h2 className="text-4xl font-bold text-left font-uxum normal">
             Start 14-day <br /> free trial on Folk
           </h2>
           <div className="flex xl:flex-col flex-row gap-4">
@@ -112,10 +112,10 @@ const Footer = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-8">
           {footerLinks.map((section) => (
             <div key={section.title}>
-              <h3 className="text-xl font-semibold mb-4 text-gray-400">
+              <h3 className="text-md font-semibold mb-2 text-white/60">
                 {section.title}
               </h3>
-              <ul className="space-y-2 text-xl">
+              <ul className="space-y-2 text-md">
                 {section.links.map((link) => (
                   <li key={link.to}>
                     <Link to={link.to} className="hover:underline">
@@ -138,13 +138,13 @@ const Footer = () => {
               <Link
                 key={link.to}
                 to={link.to}
-                className="hover:underline text-xl"
+                className="hover:underline text-md"
               >
                 {link.label}
               </Link>
             ))}
-            <span className="text-white text-xl px-2 hidden sm:block">|</span>
-            <span className="text-xl">English</span>
+            <span className="text-white text-md px-2 hidden sm:block">|</span>
+            <span className="text-md">English</span>
           </div>
           <div className="flex items-center gap-4">
             <div className="flex gap-4">

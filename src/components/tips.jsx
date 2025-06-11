@@ -59,8 +59,8 @@ const Tips = () => {
 
   return (
     <div className="py-8 bg-white">
-      <div className="max-w-[1500px] mx-auto px-8 lg:px-6">
-        <h2 className="text-5xl font-bold text-left mb-8 font-uxum normal">
+      <div className="max-w-6xl mx-auto px-8 lg:px-6">
+        <h2 className="text-4xl font-bold text-left mb-8 font-uxum normal">
           Finally, a CRM that works{" "}
           <span className="font-instrument italic font-normal">for</span> you
         </h2>
@@ -83,13 +83,13 @@ const Tips = () => {
               <AnimatePresence>
                 {tooltip.visible && tooltip.index === index && (
                   <motion.div
-                    className="absolute bg-black text-white text-lg p-4 z-10"
+                    className="absolute bg-black text-white text-sm p-4 z-10"
                     style={{
                       left: `${tooltip.x + 20}px`,
                       top: `${tooltip.y + 20}px`, // Added 20px offset below cursor
                       borderRadius: "0 24px 24px 24px",
                       transform: "translate(10%, 10%)", // Increased translate for more space
-                      width: "350px",
+                      width: "300px",
                       minHeight: "fit-content",
                       overflow: "hidden"
                     }}

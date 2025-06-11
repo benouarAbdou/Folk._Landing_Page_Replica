@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 function Button({ to, variant, children }) {
   const baseClasses =
-    "block px-6 py-4 text-xl font-medium rounded-full mx-3 text-center transition-all duration-300";
+    "block px-5 py-3 text-md font-medium rounded-full mx-3 text-center transition-all duration-300";
 
   const variantClasses =
     {

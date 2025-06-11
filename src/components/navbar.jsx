@@ -59,37 +59,37 @@ const Navbar = () => {
         isScrolled || isOpen ? "bg-white" : "bg-transparent"
       }`}
     >
-      <div className="max-w-[1500px] mx-auto px-8 lg:px-6 py-4">
+      <div className="max-w-6xl mx-auto px-8 lg:px-6 py-4">
         <div className="flex justify-between items-center">
           {/* Left Section: Logo and Menu Items */}
           <div className="flex">
             {/* Logo */}
             <div className="flex-shrink-0 flex items-center">
-              <img className="h-8 w-auto" src={Logo} alt="Logo" />
+              <img className="h-6 w-auto" src={Logo} alt="Logo" />
             </div>
             {/* Menu Items */}
             <div className="hidden lg:ml-6 lg:flex lg:space-x-4">
               <Link
                 to="/products"
-                className="inline-flex items-center px-3 py-2 text-lg font-medium hover:bg-black/10 hover:rounded-full"
+                className="inline-flex items-center px-2 py-1 text-sm font-medium hover:bg-black/10 hover:rounded-full"
               >
                 Products
               </Link>
               <Link
                 to="/solutions"
-                className="inline-flex items-center px-3 py-2 text-lg font-medium hover:bg-black/10 hover:rounded-full"
+                className="inline-flex items-center px-2 py-1 text-sm font-medium hover:bg-black/10 hover:rounded-full"
               >
                 Solutions
               </Link>
               <Link
                 to="/resources"
-                className="inline-flex items-center px-3 py-2 text-lg font-medium hover:bg-black/10 hover:rounded-full"
+                className="inline-flex items-center px-2 py-1 text-sm font-medium hover:bg-black/10 hover:rounded-full"
               >
                 Resources
               </Link>
               <Link
                 to="/prices"
-                className="inline-flex items-center px-3 py-2 text-lg font-medium hover:bg-black/10 hover:rounded-full"
+                className="inline-flex items-center px-2 py-1 text-sm font-medium hover:bg-black/10 hover:rounded-full"
               >
                 Prices
               </Link>
@@ -100,19 +100,19 @@ const Navbar = () => {
           <div className="hidden lg:ml-6 lg:flex lg:items-center lg:space-x-4">
             <Link
               to="/demo"
-              className="inline-flex items-center px-3 py-2 text-lg font-medium hover:bg-black/10 hover:rounded-full"
+              className="inline-flex items-center px-2 py-1 text-sm font-medium hover:bg-black/10 hover:rounded-full"
             >
               Get Demo
             </Link>
             <Link
               to="/login"
-              className="inline-flex items-center px-3 py-2 text-lg font-medium hover:bg-black/10 hover:rounded-full"
+              className="inline-flex items-center px-2 py-1 text-sm font-medium hover:bg-black/10 hover:rounded-full"
             >
               Login
             </Link>
             <Link
               to="/try-free"
-              className="inline-flex items-center px-4 py-2 border border-transparent text-lg font-medium rounded-full text-white bg-black hover:bg-transparent hover:text-black hover:border-black"
+              className="inline-flex items-center px-4 py-1 border border-transparent text-sm font-medium rounded-full text-white bg-black hover:bg-transparent hover:text-black hover:border-black"
             >
               Try for Free
             </Link>
@@ -122,7 +122,7 @@ const Navbar = () => {
           <div className="lg:hidden flex items-center space-x-2">
             <Link
               to="/try-free"
-              className={`inline-flex items-center justify-center px-4 py-2 text-lg font-medium rounded-full text-white bg-black hover:bg-transparent hover:text-black hover:border-black border border-transparent ${
+              className={`inline-flex items-center justify-center px-4 py-1 text-sm font-medium rounded-full text-white bg-black hover:bg-transparent hover:text-black hover:border-black border border-transparent ${
                 isOpen ? "invisible" : "visible"
               }`}
             >
@@ -180,30 +180,30 @@ const Navbar = () => {
           <div className="pt-2 pb-3 px-8 space-y-1">
             <Link
               to="/products"
-              className="block px-4 py-2 text-2xl font-medium hover:bg-black/10 hover:rounded-full"
+              className="block px-4 py-1 text-2xl font-medium hover:bg-black/10 hover:rounded-full"
             >
               Products
             </Link>
             <Link
               to="/solutions"
-              className="block px-4 py-2 text-2xl font-medium hover:bg-black/10 hover:rounded-full"
+              className="block px-4 py-1 text-2xl font-medium hover:bg-black/10 hover:rounded-full"
             >
               Solutions
             </Link>
             <Link
               to="/resources"
-              className="block px-4 py-2 text-2xl font-medium hover:bg-black/10 hover:rounded-full"
+              className="block px-4 py-1 text-2xl font-medium hover:bg-black/10 hover:rounded-full"
             >
               Resources
             </Link>
             <Link
               to="/prices"
-              className="block px-4 py-2 text-2xl font-medium hover:bg-black/10 hover:rounded-full"
+              className="block px-4 py-1 text-2xl font-medium hover:bg-black/10 hover:rounded-full"
             >
               Prices
             </Link>
             {/* Separator Line */}
-            <div className="border-t border-gray-200 mx-3 py-2" />
+            <div className="border-t border-gray-200 mx-3 py-1" />
             <Link
               to="/demo"
               className="block px-6 py-4 text-2xl font-medium hover:bg-black hover:text-white border border-black rounded-full mx-3 my-4 justify-center"

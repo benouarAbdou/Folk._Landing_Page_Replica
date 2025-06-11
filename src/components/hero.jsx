@@ -17,7 +17,7 @@ function Hero() {
       {" "}
       {/* Added relative positioning and padding-bottom to create space for absolute image */}
       <div className="mx-auto">
-        <h1 className="pt-32 font-uxum normal font-semibold text-4xl md:text-7xl mb-6 md:leading-20">
+        <h1 className="pt-32 font-uxum normal font-semibold text-4xl md:text-6xl mb-6 md:leading-15">
           Like the{" "}
           <span className="font-instrument italic font-normal">
             sales assistant
@@ -26,12 +26,12 @@ function Hero() {
           your team never had
         </h1>
 
-        <p className="font-inter text-lg md:text-xl leading-relaxed mb-8">
+        <p className="font-inter text-md   mb-8">
           Folk CRM does the busy work for you, so you <br /> can focus on
           growing your service business.
         </p>
 
-        <div className="flex justify-center gap-2">
+        <div className="flex justify-center ">
           <Button to="/try-free" variant="filled">
             Try for Free
           </Button>

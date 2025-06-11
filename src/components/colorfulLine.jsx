@@ -14,7 +14,7 @@ const ColorfulLine = () => {
   const getRandomFlex = () => Math.random() * 2 + 1;
 
   return (
-    <div style={{ display: "flex", height: "15px" }}>
+    <div style={{ display: "flex", height: "10px" }}>
       {colors.map((color, index) => (
         <div
           key={index}
