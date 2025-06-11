@@ -4,8 +4,8 @@ import SpotlightCard from "./SpotlightCard.jsx"; // Adjust the import path as ne
 
 const Qr = () => {
   return (
-    <div className="max-w-6xl mx-auto px-8 py-10 lg:px-6">
-      <div className="flex flex-col items-center lg:gap-16 p-8 lg:p-12 sm:flex-row border-2 border-black">
+    <div className="flex flex-col w-full max-w-6xl p-6 mx-auto">
+      <div className="flex flex-col items-center lg:gap-16 p-6 lg:p-12 sm:flex-row border-1 border-black">
         {/* QR Code Image - Hidden on mobile */}
         <SpotlightCard
           className="custom-spotlight-card"
@@ -18,7 +18,7 @@ const Qr = () => {
           />
         </SpotlightCard>
         {/* Text Column */}
-        <div className="flex flex-col  gap-6">
+        <div className="flex flex-col gap-6">
           <div className="inline-block">
             <span className="px-2 py-1 text-sm font-semibold text-black border-black border-[1px] rounded-full">
               New

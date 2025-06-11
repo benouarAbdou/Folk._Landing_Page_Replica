@@ -19,7 +19,7 @@ function AdvantageCard(props) {
 
       <img
         src={props.imageSrc}
-        className="w-full h-full object-cover border-2 border-black"
+        className="w-full h-full object-cover border-1 border-black"
         alt=""
       />
     </div>

@@ -45,7 +45,7 @@ function Hero() {
         alt="Hero"
         className="absolute bottom-0 left-0 w-full h-auto "
       />
-      <div className="absolute bottom-0 left-0 w-full h-[2px] bg-black z-10" />
+      <div className="absolute bottom-0 left-0 w-full h-[1px] bg-black z-10" />
     </section>
   );
 }

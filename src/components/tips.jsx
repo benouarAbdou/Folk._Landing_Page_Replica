@@ -75,7 +75,7 @@ const Tips = () => {
               <img
                 src={`/src/assets/images/${card.image}.png`}
                 alt={card.text}
-                className="w-full h-full object-cover border-2 border-black bg-[#f7f3ef] "
+                className="w-full h-full object-cover border-1 border-black bg-[#f7f3ef] "
               />
               <h1 className="mt-4 text-center text-xl font-bold font-uxum normal">
                 {card.text}

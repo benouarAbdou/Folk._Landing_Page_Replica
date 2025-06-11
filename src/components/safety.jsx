@@ -5,10 +5,10 @@ import gologo from "../assets/images/gologo.svg";
 
 const Safety = () => {
   return (
-    <div className="max-w-6xl  mb-6 px-8 py-10 lg:px-6 mx-auto">
+    <div className="flex flex-col w-full max-w-6xl p-6 mx-auto mb-8">
       <div className="flex flex-col xl:flex-row items-center border-black border-[1px]">
         {/* Text Section */}
-        <div className="flex-1 w-full py-4 px-6 -mx-8 lg:-mx-6 text-center lg:text-left xl:mx-0 xl:border-none border-b-[1px] border-black">
+        <div className="flex-1 w-full py-4 px-6 text-center lg:text-left xl:border-none border-b-[1px] border-black">
           <h2 className="text-3xl lg:text-4xl font-semibold font-uxum normal">
             Your data is safe with us
           </h2>
